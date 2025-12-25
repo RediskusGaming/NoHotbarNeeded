@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package net.xonich.mc.nohotbarneeded;
 
 import java.io.File;
 
