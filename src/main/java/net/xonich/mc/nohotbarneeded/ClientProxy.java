@@ -1,9 +1,11 @@
 package net.xonich.mc.nohotbarneeded;
 
-import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.xonich.mc.nohotbarneeded.handlers.KeyboardEventHandler;
 
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+
 public class ClientProxy extends CommonProxy {
+
     private KeyboardEventHandler keyboardEventHandler;
 
     @Override

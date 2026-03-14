@@ -1,10 +1,5 @@
 package net.xonich.mc.nohotbarneeded.handlers;
 
-import codechicken.nei.NEIClientConfig;
-import codechicken.nei.api.API;
-import codechicken.nei.guihook.GuiContainerManager;
-import codechicken.nei.guihook.IContainerInputHandler;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -14,7 +9,12 @@ import net.minecraft.item.ItemStack;
 import net.xonich.mc.nohotbarneeded.api.ActivatableFromInventoryServerSide;
 import net.xonich.mc.nohotbarneeded.network.ActivateItemRequest;
 import net.xonich.mc.nohotbarneeded.network.NetworkMessageService;
+
 import org.lwjgl.input.Keyboard;
+
+import codechicken.nei.guihook.GuiContainerManager;
+import codechicken.nei.guihook.IContainerInputHandler;
+import cpw.mods.fml.client.registry.ClientRegistry;
 
 public class KeyboardEventHandler implements IContainerInputHandler {
 
@@ -57,7 +57,8 @@ public class KeyboardEventHandler implements IContainerInputHandler {
                 ItemStack stack = slot.getStack();
 
                 if (stack != null && stack.getItem() instanceof ActivatableFromInventoryServerSide) {
-                    NetworkMessageService.getInstance().sentActivateItemMessage(new ActivateItemRequest(slot.getSlotIndex()));
+                    NetworkMessageService.getInstance()
+                        .sentActivateItemMessage(new ActivateItemRequest(slot.getSlotIndex()));
 
                     return true;
                 }

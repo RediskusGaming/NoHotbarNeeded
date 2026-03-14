@@ -4,17 +4,18 @@ import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
 
 public class ActivateItemRequest implements IMessage {
+
     private int slotIdx = -1;
 
     /**
      * Ctor.
      * Required by network stack.
      */
-    public ActivateItemRequest() {
-    }
+    public ActivateItemRequest() {}
 
     /**
      * Ctor for convenience
+     * 
      * @param slotIdx valid inventory slot index.
      */
     public ActivateItemRequest(int slotIdx) {

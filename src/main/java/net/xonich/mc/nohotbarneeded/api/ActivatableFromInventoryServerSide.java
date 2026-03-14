@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
  * Each item will define
  */
 public interface ActivatableFromInventoryServerSide {
+
     /**
      * Trigger item usage
      */
