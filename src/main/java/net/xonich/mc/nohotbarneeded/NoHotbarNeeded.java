@@ -22,7 +22,7 @@ public class NoHotbarNeeded {
 
     @SidedProxy(
         clientSide = "net.xonich.mc.nohotbarneeded.ClientProxy",
-        serverSide = "net.xonich.mc.nohotbarneeded.ClientProxy")
+        serverSide = "net.xonich.mc.nohotbarneeded.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler
